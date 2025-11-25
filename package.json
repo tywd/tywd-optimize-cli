@@ -1,0 +1,62 @@
+{
+  "name": "@tywd/optimize-cli",
+  "version": "1.0.0",
+  "description": "前端性能优化检测工具，根据优化清单自动化检测项目问题并生成可视化报告",
+  "main": "lib/detector.js",
+  "bin": {
+    "optimize-cli": "./bin/optimize-cli.js"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "templates/",
+    "docs/",
+    "README.md"
+  ],
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run build",
+    "build": "echo \"No build step required\"",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "keywords": [
+    "performance",
+    "optimization",
+    "frontend",
+    "cli",
+    "web",
+    "audit",
+    "lighthouse"
+  ],
+  "author": "tywd",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^9.4.0",
+    "ejs": "^3.1.8",
+    "fs-extra": "^10.1.0",
+    "glob": "^8.0.3",
+    "ora": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "vitepress": "^1.0.0-rc.30"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tywd/optimize-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tywd/optimize-cli/issues"
+  },
+  "homepage": "https://github.com/tywd/optimize-cli#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}
