@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/tywd-optimize-cli/',
   title: '前端性能优化检测工具',
   description: '基于优化清单的自动化检测工具',
   
