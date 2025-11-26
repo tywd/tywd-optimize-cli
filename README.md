@@ -1,4 +1,4 @@
-# optimize-cli
+# @tywd/optimize-cli
 
 前端性能优化检测工具，根据优化清单自动化检测项目问题并生成可视化报告。
 
@@ -14,15 +14,15 @@
 
 ```bash
 # 全局安装 (推荐使用 pnpm)
-pnpm install -g optimize-cli
+pnpm install -g @tywd/optimize-cli
 
 # 也可以使用 npm 安装
-npm install -g optimize-cli
+npm install -g @tywd/optimize-cli
 
 # 或者作为开发依赖安装
-pnpm install -D optimize-cli
+pnpm install -D @tywd/optimize-cli
 # 或者
-npm install -D optimize-cli
+npm install -D @tywd/optimize-cli
 ```
 
 ## 使用方法
