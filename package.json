@@ -1,6 +1,6 @@
 {
   "name": "@tywd/optimize-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "前端性能优化检测工具，根据优化清单自动化检测项目问题并生成可视化报告",
   "main": "lib/detector.js",
   "bin": {
