@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.6] - 2025-11-28
+
+### Fixed
+
+- 删除多余的空文件 optimize-cli.js
+- 使版本号自动从 package.json 中读取，避免手动维护
+
 ## [1.0.5] - 2025-11-28
 
 ### Fixed
