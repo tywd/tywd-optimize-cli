@@ -10,7 +10,7 @@ const { performance } = require('perf_hooks');
 const program = new Command();
 
 program
-  .version('1.0.2')
+  .version('1.0.4')
   .description('前端性能优化检测工具')
   .usage('<command> [options]');
 
