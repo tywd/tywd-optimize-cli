@@ -7,7 +7,11 @@
 检查项目性能优化项
 
 ```bash
+# 全局安装后使用
 optimize-cli check [options]
+
+# 项目内安装后使用
+npx optimize-cli check [options]
 ```
 
 #### 选项
@@ -20,17 +24,29 @@ optimize-cli check [options]
 #### 示例
 
 ```bash
-# 在当前目录执行检测
+# 在当前目录执行检测（全局安装后）
 optimize-cli check
 
-# 指定项目路径
+# 在当前目录执行检测（项目内安装后）
+npx optimize-cli check
+
+# 指定项目路径（全局安装后）
 optimize-cli check --path ./my-project
 
-# 生成报告并显示详细信息
+# 指定项目路径（项目内安装后）
+npx optimize-cli check --path ./my-project
+
+# 生成报告并显示详细信息（全局安装后）
 optimize-cli check --report --verbose
 
-# 组合使用
+# 生成报告并显示详细信息（项目内安装后）
+npx optimize-cli check --report --verbose
+
+# 组合使用（全局安装后）
 optimize-cli check --path ./my-project --report --verbose
+
+# 组合使用（项目内安装后）
+npx optimize-cli check --path ./my-project --report --verbose
 ```
 
 ### finish
@@ -38,7 +54,77 @@ optimize-cli check --path ./my-project --report --verbose
 完成优化建议（计划中）
 
 ```bash
+# 全局安装后使用
 optimize-cli finish
+
+# 项目内安装后使用
+npx optimize-cli finish
+```
+
+## 使用方式
+
+### 全局安装后使用
+
+安装完成后，可以在任何地方直接使用命令：
+
+```bash
+# 显示版本号
+optimize-cli --version
+
+# 显示帮助信息
+optimize-cli --help
+
+# 显示check命令的帮助信息
+optimize-cli check --help
+```
+
+### 项目内安装后使用
+
+项目内安装后，使用 `npx` 前缀来调用命令：
+
+```bash
+# 显示版本号
+npx optimize-cli --version
+
+# 显示帮助信息
+npx optimize-cli --help
+
+# 显示check命令的帮助信息
+npx optimize-cli check --help
+```
+
+### 通过 package.json 脚本使用（推荐）
+
+为了更方便地使用，可以在项目的 `package.json` 中添加自定义脚本：
+
+```json
+{
+  "scripts": {
+    "optimize": "optimize-cli",
+    "optimize:check": "optimize-cli check",
+    "optimize:report": "optimize-cli check --report",
+    "optimize:verbose": "optimize-cli check --verbose"
+  }
+}
+```
+
+然后使用 npm/yarn/pnpm 运行：
+
+```bash
+# 使用 npm
+npm run optimize:check
+npm run optimize:report
+npm run optimize -- --version
+
+# 使用 yarn
+yarn optimize:check
+yarn optimize:report
+yarn optimize --version
+
+# 使用 pnpm
+pnpm optimize:check
+pnpm optimize:report
+pnpm optimize --version
 ```
 
 ## 兼容性说明
@@ -65,12 +151,21 @@ optimize-cli finish
 ## 使用示例
 
 ```bash
-# 显示版本号
+# 显示版本号（全局安装后）
 optimize-cli --version
 
-# 显示帮助信息
+# 显示版本号（项目内安装后）
+npx optimize-cli --version
+
+# 显示帮助信息（全局安装后）
 optimize-cli --help
 
-# 显示check命令的帮助信息
+# 显示帮助信息（项目内安装后）
+npx optimize-cli --help
+
+# 显示check命令的帮助信息（全局安装后）
 optimize-cli check --help
+
+# 显示check命令的帮助信息（项目内安装后）
+npx optimize-cli check --help
 ```

@@ -2,16 +2,100 @@
 
 ## 安装
 
-### 全局安装
+### 全局安装（推荐用于频繁使用）
+
+全局安装后可以直接使用 `optimize-cli` 命令：
 
 ```bash
 npm install -g @tywd/optimize-cli
+# 或者使用 yarn
+yarn global add @tywd/optimize-cli
+# 或者使用 pnpm
+pnpm install -g @tywd/optimize-cli
 ```
 
-### 项目内安装
+### 项目内安装（推荐用于单个项目使用）
+
+项目内安装后需要通过 `npx` 来使用命令：
 
 ```bash
 npm install -D @tywd/optimize-cli
+# 或者使用 yarn
+yarn add -D @tywd/optimize-cli
+# 或者使用 pnpm
+pnpm install -D @tywd/optimize-cli
+```
+
+## 使用方式
+
+### 全局安装后使用
+
+安装完成后，可以在任何地方直接使用命令：
+
+```bash
+# 检测项目优化项
+optimize-cli check
+
+# 生成可视化报告
+optimize-cli check --report
+
+# 指定项目路径
+optimize-cli check --path ./your-project-path
+
+# 显示详细信息
+optimize-cli check --verbose
+```
+
+### 项目内安装后使用
+
+项目内安装后，使用 `npx` 前缀来调用命令：
+
+```bash
+# 检测项目优化项
+npx optimize-cli check
+
+# 生成可视化报告
+npx optimize-cli check --report
+
+# 指定项目路径
+npx optimize-cli check --path ./your-project-path
+
+# 显示详细信息
+npx optimize-cli check --verbose
+```
+
+### 通过 package.json 脚本使用（推荐）
+
+为了更方便地使用，可以在项目的 `package.json` 中添加自定义脚本：
+
+```json
+{
+  "scripts": {
+    "optimize": "optimize-cli",
+    "optimize:check": "optimize-cli check",
+    "optimize:report": "optimize-cli check --report",
+    "optimize:verbose": "optimize-cli check --verbose"
+  }
+}
+```
+
+然后使用 npm/yarn/pnpm 运行：
+
+```bash
+# 使用 npm
+npm run optimize:check
+npm run optimize:report
+npm run optimize -- --version
+
+# 使用 yarn
+yarn optimize:check
+yarn optimize:report
+yarn optimize --version
+
+# 使用 pnpm
+pnpm optimize:check
+pnpm optimize:report
+pnpm optimize --version
 ```
 
 ## 兼容性说明
@@ -37,31 +121,51 @@ npm install -D @tywd/optimize-cli
 在项目根目录执行：
 
 ```bash
+# 全局安装后
 optimize-cli check
+
+# 项目内安装后
+npx optimize-cli check
 ```
 
 ### 生成可视化报告
 
 ```bash
+# 全局安装后
 optimize-cli check --report
+
+# 项目内安装后
+npx optimize-cli check --report
 ```
 
 ### 指定项目路径
 
 ```bash
+# 全局安装后
 optimize-cli check --path ./your-project-path
+
+# 项目内安装后
+npx optimize-cli check --path ./your-project-path
 ```
 
 ### 显示详细信息
 
 ```bash
+# 全局安装后
 optimize-cli check --verbose
+
+# 项目内安装后
+npx optimize-cli check --verbose
 ```
 
 ### 组合使用
 
 ```bash
+# 全局安装后
 optimize-cli check --path ./your-project-path --report --verbose
+
+# 项目内安装后
+npx optimize-cli check --path ./your-project-path --report --verbose
 ```
 
 ## 命令行参数详解
