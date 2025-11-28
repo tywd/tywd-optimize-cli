@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.8] - 2025-11-28
+
+### Added
+
+- 为 CLI 入口文件添加详细代码注释，提升代码可读性和维护性
+- 为检测器核心类添加完整注释，包括类说明、方法说明和参数说明
+- 添加模块导入和初始化阶段的详细注释
+
+### Changed
+
+- 优化模块动态加载机制的注释说明
+- 完善错误处理和异常情况的注释
+- 增强命令行参数解析和处理逻辑的注释
+
 ## [1.0.7] - 2025-11-28
 
 ### Fixed

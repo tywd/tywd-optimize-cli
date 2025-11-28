@@ -131,7 +131,7 @@ pnpm link --global
 ## 文档和代码地址
 
 - 项目代码仓库: https://github.com/tywd/optimize-cli
-- 在线文档: https://tywd.github.io/optimize-cli/
+- 在线文档: https://tywd.github.io/optimize-cli
 
 ## License
 
